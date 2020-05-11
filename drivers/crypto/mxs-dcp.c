@@ -572,6 +572,7 @@ static int dcp_sha_req_to_buf(struct crypto_async_request *arq)
 	struct hash_alg_common *halg = crypto_hash_alg_common(tfm);
 
 	uint8_t *in_buf = sdcp->coh->sha_in_buf;
+	uint8_t *out_buf = sdcp->coh->sha_out_buf;
 
 	struct scatterlist *src;
 

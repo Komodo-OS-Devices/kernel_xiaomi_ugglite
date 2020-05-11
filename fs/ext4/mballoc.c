@@ -2928,7 +2928,7 @@ ext4_mb_mark_diskspace_used(struct ext4_allocation_context *ac,
 		ext4_unlock_group(sb, ac->ac_b_ex.fe_group);
 		err = ext4_handle_dirty_metadata(handle, NULL, bitmap_bh);
 		if (!err)
-			err = -EAGAIN;
+			err = -EFSCORRUPTED;
 		goto out_err;
 	}
 
